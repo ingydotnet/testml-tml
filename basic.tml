@@ -1,9 +1,9 @@
-# This is the TestML spec version 
-%TestML: 1.0
+# A very basic TestML test document.
+
+%TestML: 1.0                    # This is the TestML spec version 
 %Title:  A Basic TestML File
 %Plan:   10
 
-# TODO First statement parses wrong!
 *foo.List().Join(' - ')          == *bar;
 *foo.List().Reverse().Item()     == *baz;
 *foo.List().Sort().Item()        == *baz.List().Sort().Item();
