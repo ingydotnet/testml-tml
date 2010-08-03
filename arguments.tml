@@ -3,6 +3,7 @@
 
 *what.combine(*who) == *greeting;
 *what.combine('and', *else) == *greeting;
+# *what.combine('and', *else.upper) == *upper_greeting;
 
 === Dear John
 --- what: Dear
@@ -13,3 +14,4 @@
 --- what: Greetings
 --- else: Salutations
 --- greeting: Greetings and Salutations
+--- upper_greeting: Greetings and SALUTATIONS
