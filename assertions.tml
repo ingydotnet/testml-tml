@@ -1,0 +1,7 @@
+%TestML: 1.0
+%Plan: 4
+
+'The cat in the hat'.HAS('cat');
+'The cat in the hat' ~~ ('hat');
+'The cat in the hat'.OK;
+'The cat in the hat'.OK();

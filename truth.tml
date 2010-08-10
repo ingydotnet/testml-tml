@@ -1,0 +1,11 @@
+%TestML: 1.0
+%Plan: 8
+
+True.OK;
+False.Not.OK;
+'Text'.OK;
+''.Not.OK;
+List("x\ny").OK;
+List.Not.OK;
+42.OK;
+0.Not.OK;
