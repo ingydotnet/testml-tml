@@ -3,4 +3,4 @@
 
 'foo' == "foo";
 
-String('bar') == "bar";
+'bar'.Str == "bar";
