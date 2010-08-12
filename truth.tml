@@ -1,11 +1,19 @@
 %TestML: 1.0
-%Plan: 8
+%Plan: 4
 
 True.OK;
 False.Not.OK;
 'Text'.OK;
 ''.Not.OK;
-List("x\ny").OK;
-List.Not.OK;
-42.OK;
-0.Not.OK;
+
+# String/Number context not implemented yet.
+# '0'.OK;
+# '1'.OK;
+
+# XXX List context not yet supported.
+# List("x\ny").OK;
+# List.Not.OK;
+
+# XXX Number context not yet supported.
+# 42.OK;
+# 0.Not.OK;
