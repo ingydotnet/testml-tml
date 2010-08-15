@@ -2,33 +2,16 @@
 
 %TestML: 1.0                    # This is the TestML spec version 
 %Title:  A Basic TestML File
-%Plan:   10
+%Plan:   3
 
-*foo.Lines.Join(' - ')  == *bar;
-*foo.Lines.Reverse.Text == *baz;
-*foo.Lines.Sort.Text    == *baz.Lines.Sort.Text;
-*foo.Lines.Text         == *foo;
-*foo.my_thing           == *bar;
-
+*text.my_lower == *lower;
+*text.my_upper == *upper;
 
 === Test One
---- foo
-a
-b
-c
---- bar: a - b - c
---- baz
-c
-b
-a
+--- text: I Like Pie
+--- lower: i like pie
+--- upper: I LIKE PIE
 
 === Test Two
---- foo
-I
-like
-pie!
---- bar: I - like - pie!
---- baz
-pie!
-like
-I
+--- text: I Love Lucy
+--- upper: I LOVE LUCY
