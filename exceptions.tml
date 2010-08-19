@@ -1,7 +1,7 @@
 %TestML: 1.0
 %Plan: 3
 
-*testml_stream.parse_testml().Catch().msg() == *error;
+*testml_stream.parse_testml().Catch().msg() ~~ *error;
 
 === No TestML meta directive
 --- testml_stream
