@@ -1,5 +1,7 @@
 %TestML: 1.0
-%Plan: 2
+
+Title = 'TestML with no data section';
+Plan = 2;
 
 'foo' == "foo";
 

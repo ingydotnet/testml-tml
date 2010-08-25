@@ -1,7 +1,7 @@
 %TestML: 1.0
-%Title: Test the TestML Standard Library
-%Plan: 10
 
+Title = 'Test the TestML Standard Library';
+Plan = 10;
 
 True.OK;
 False.Not.OK;

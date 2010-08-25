@@ -1,5 +1,6 @@
 %TestML: 1.0
-%Plan: 4
+
+Plan = 4;
 
 Label = 'My label';
 Get('Label') == 'My label';
