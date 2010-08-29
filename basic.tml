@@ -1,6 +1,6 @@
 # A very basic TestML test document.
 
-%TestML: 1.0                    # This is the TestML spec version 
+%TestML 1.0
 
 Title = 'A Basic TestML File';
 Plan = 3;

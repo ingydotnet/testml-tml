@@ -1,6 +1,6 @@
-%TestML: 1.0
-%BlockMarker: +++
-%PointMarker: ???
+%TestML 1.0
+%BlockMarker +++
+%PointMarker ???
 
 Plan = 2;
 
