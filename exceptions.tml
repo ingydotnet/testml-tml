@@ -13,7 +13,7 @@ Plan = 3;
 
 === Missing semicolon
 --- testml_stream
-%TestML: 1.0
+\%TestML: 1.0
 *foo == *bar
 *foo == *bar;
 --- error: You seem to be missing a semicolon
@@ -21,7 +21,7 @@ Plan = 3;
 
 === Missing semicolon on a non assertion
 --- testml_stream
-%TestML: 1.0
+\%TestML: 1.0
 *foo == *bar;
 *foo()
 *foo == *bar;
