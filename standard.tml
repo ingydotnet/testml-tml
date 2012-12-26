@@ -1,16 +1,16 @@
-%TestML 1.0
+%TestML 0.1.0
 
-Title = 'Test the TestML Standard Library';
-Plan = 10;
+Title = 'Test the TestML Standard Library'
+Plan = 10
 
-True.OK;
-False.Not.OK;
-None.Not.OK;
-*lines.Lines.Count == 5;
-*foo.Lines.Join(' - ')  == *bar;
-*foo.Lines.Reverse.Text == *baz;
-*foo.Lines.Sort.Text    == *baz.Lines.Sort.Text;
-*foo.Lines.Text         == *foo;
+True.OK
+False.Not.OK
+None.Not.OK
+*lines.Lines.Count == 5
+*foo.Lines.Join(' - ')  == *bar
+*foo.Lines.Reverse.Text == *baz
+*foo.Lines.Sort.Text    == *baz.Lines.Sort.Text
+*foo.Lines.Text         == *foo
 
 === List
 --- lines
