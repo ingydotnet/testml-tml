@@ -178,6 +178,60 @@ The bridge class is not named in the TestML Document itself, but through some
 external mechanism provided by the TestML implementation for the native
 language.
 
+== TestML Runtime
+
+TestML statements have a semantic system that is easy to read, but a little bit
+different than traditional OO method call semantics. It works like this:
+
+    a.B(c).d == e
+    a.B(c).d.EQ(e)
+    EQ(a.B(c).d, e)
+    EQ(B(a, c).d, e)
+    EQ(d(B(a, c)), e)
+    EQ(d(B(a(), c())), e())
+
+All the statements above are roughly equivalent. The first statement is typical
+TestML chained transforms. Start with 'a', pass is to 'B' along with 'c', apply
+'d' to the result and assert it is equal to e.
+
+The interesting part is what are a, B, c, d and e, and where do they come from.
+In typical OO:
+
+    a.b(c)
+
+means call method 'a' in the current namespace and then call method 'b' on the
+namespace of the return value of 'a', and pass along value 'c'. 'a' is passed
+along implicitly in the form of `this` or `self`. It can be thought of as:
+
+    x = a()
+    m = get_namespace_method('x', 'b')
+    m(x, c)
+
+In TestML, that's pretty much how it works internally, except that the method
+lookup involves more than one namespace:
+
+    * Check the return value namespace
+    * Check the bridge class namespace
+    * Check the runtime namespace
+
+It is important to know that the return value is always a TestML object. Even
+if a bridge class method returns a string, it will be turned into TestML::Str
+object, and that namespace is the one that will be queried.
+
+    *text.Lines.calibrate(*blob).yaml == *expect
+    Point('text').Lines.calibrate(Point('blob')).yaml.EQ(Point('expect'))
+
+The first line is a typical TestML statement. The second is a more verbose
+equivalent.
+
+`text`, `blob` and `expect` are point values from a data block. `Lines` is a
+TestML::Str method that returns a TestML::List object. `Point` and `EQ` are
+TestML::Runtime methods. `calibrate` and `yaml` are defined by the user in
+their TestML::Bridge subclass.
+
+Each method is looked up and called with the return value from the function on
+its left, plus any values passed in directly.
+
 == Examples
 
     a = b = 3
