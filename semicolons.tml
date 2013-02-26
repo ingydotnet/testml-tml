@@ -3,7 +3,7 @@
 
 %TestML 0.1.0
 
-Plan = 2;
+Plan = 3;
 
 'one' == 'one'
 'two' == 'two';

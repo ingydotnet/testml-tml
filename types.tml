@@ -20,5 +20,5 @@ b = False
 b.Type == 'Bool'
 l = List()
 l.Type == 'List'
-f = ->
+f = {}
 f.Type == 'Func'
